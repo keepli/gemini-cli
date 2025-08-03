@@ -23,6 +23,27 @@ export const validateAuthMethod = (authMethod: string): string | null => {
     return null;
   }
 
+  if (authMethod === AuthType.SILICONFLOW_API_KEY) {
+    if (!process.env.GEMINI_SILICONFLOW_API_KEY) {
+      return 'GEMINI_SILICONFLOW_API_KEY environment variable not found. Add that to your environment and try again (no reload needed if using .env)!';
+    }
+    return null;
+  }
+
+  if (authMethod === AuthType.ZHIPU_API_KEY) {
+    if (!process.env.GEMINI_ZHIPU_API_KEY) {
+      return 'GEMINI_ZHIPU_API_KEY environment variable not found. Add that to your environment and try again (no reload needed if using .env)!';
+    }
+    return null;
+  }
+
+  if (authMethod === AuthType.OPENAI_COMPATIBLE_API_KEY) {
+    if (!process.env.GEMINI_OPENAI_COMPATIBLE_API_KEY) {
+      return 'GEMINI_OPENAI_COMPATIBLE_API_KEY environment variable not found. Add that to your environment and try again (no reload needed if using .env)!';
+    }
+    return null;
+  }
+
   if (authMethod === AuthType.USE_VERTEX_AI) {
     const hasVertexProjectLocationConfig =
       !!process.env.GOOGLE_CLOUD_PROJECT && !!process.env.GOOGLE_CLOUD_LOCATION;

@@ -77,6 +77,18 @@ export function AuthDialog({
       value: AuthType.USE_GEMINI,
     },
     { label: 'Vertex AI', value: AuthType.USE_VERTEX_AI },
+    {
+      label: 'SiliconFlow API Key (硅基流动)',
+      value: AuthType.SILICONFLOW_API_KEY,
+    },
+    {
+      label: 'Zhipu AI API Key (智谱轻言)',
+      value: AuthType.ZHIPU_API_KEY,
+    },
+    {
+      label: 'OpenAI Compatible AI (自定义)',
+      value: AuthType.OPENAI_COMPATIBLE_API_KEY,
+    },
   ];
 
   const initialAuthIndex = items.findIndex((item) => {

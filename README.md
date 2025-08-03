@@ -16,6 +16,7 @@ With the Gemini CLI you can:
   Veo or Lyria](https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia)
 - Ground your queries with the [Google Search](https://ai.google.dev/gemini-api/docs/grounding)
   tool, built into Gemini.
+- **Use multiple AI providers**: Support for SiliconFlow (硅基流动), Zhipu AI (智谱轻言), and other custom providers alongside Google's Gemini models.
 
 ## Quickstart
 

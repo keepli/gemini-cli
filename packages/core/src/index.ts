@@ -62,6 +62,9 @@ export * from './tools/tool-registry.js';
 // Export prompt logic
 export * from './prompts/mcp-prompts.js';
 
+// Export providers
+export * from './providers/index.js';
+
 // Export specific tool logic
 export * from './tools/read-file.js';
 export * from './tools/ls.js';

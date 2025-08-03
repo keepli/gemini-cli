@@ -58,6 +58,13 @@ export interface AccessibilitySettings {
   disableLoadingPhrases?: boolean;
 }
 
+export interface ProviderSettings {
+  apiKey?: string;
+  baseUrl?: string;
+  model?: string;
+  customHeaders?: Record<string, string>;
+}
+
 export interface Settings {
   theme?: string;
   customThemes?: Record<string, CustomTheme>;
@@ -113,6 +120,14 @@ export interface Settings {
 
   memoryDiscoveryMaxDirs?: number;
   dnsResolutionOrder?: DnsResolutionOrder;
+
+  // Custom provider settings
+  providers?: {
+    siliconflow?: ProviderSettings;
+    zhipu?: ProviderSettings;
+    'openai-compatible'?: ProviderSettings;
+    [key: string]: ProviderSettings | undefined;
+  };
 }
 
 export interface SettingsError {
